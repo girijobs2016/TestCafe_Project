@@ -1,0 +1,32 @@
+{
+  "name": "testcafe_testing",
+  "version": "1.0.0",
+  "description": "Automated testing using testcafe",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome": "testcafe chrome ./tests/*.test.ts --reporter html:./report/testreporter.html list -s takeOnFails=true",
+    "test:ie": "testcafe ie ./tests",
+    "test:firefox": "testcafe firefox ./tests",
+    "test:chrome:headless": "testcafe chrome:headless ./tests",
+    "test:chrome:mobile": "testcafe chrome:emulation:device=iphone X ./tests",
+    "test:multiple": "testcafe chrome,firefox ./tests -s takeOnFails=true"
+  },
+  "keywords": [
+    "TestCafe",
+    "Testing",
+    "Automation"
+  ],
+  "author": "Girish",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^2.0.5",
+    "testcafe": "^1.8.7",
+    "testcafe-hammerhead": "^17.1.9",
+    "testcafe-reporter-json": "^2.2.0",
+    "testcafe-reporter-list": "^2.1.0",
+    "testcafe-reporter-nunit": "^0.1.2",
+    "testcafe-reporter-xunit": "^2.1.0",
+    "testcafe-reporter-html": "^1.4.6",
+    "xpath-to-css": "^1.0.5"
+  }
+}
